@@ -1,0 +1,37 @@
+<section id="wave-interference" class="section">
+	<div class="description">
+		<h1>Wave Interference</h1>
+		<p>When two waves of the same type have the same frequency, we say that they are <em>coherent</em>.</p>
+		<p>There's still one property we can change for two waves with the same frequency, and that is their phase difference $\phi$. That represents the <em>fraction of a cycle</em> one wave is ahead of the other by.</em></p>
+		<p>For instance, if wave two is half a cycle ($\pi$ radians) ahead of wave one, the peaks of wave two will match up with the troughs of wave one. The resultant displacement is zero, and the two waves cancel each other out. This is known as <em>destructive interference</em>.</p>
+		<p>On the other hand, if wave two is a whole number of cycles ($0,2\pi,4\pi,...$ radians) ahead of wave one, the peaks of wave two will match up with the peaks of wave one. The resultant wave has an amplitude $A=A_1+A_2$. This is known as <em>constructive interference</em>.</p>
+		<div class="sliders">
+			<div class="slider-row amplitude one">
+				<div class="variable">$A_1$</div>
+				<input type="range" min="0.05" max="1" value="0.5" step="0.05">
+				<div class="value"></div>
+			</div>
+			<div class="slider-row amplitude two">
+				<div class="variable">$A_2$</div>
+				<input type="range" min="0.05" max="1" value="0.5" step="0.05">
+				<div class="value"></div>
+			</div>
+			<div class="slider-row frequency">
+				<div class="variable">$f$</div>
+				<input type="range" min="0.05" max="1" value="0.5" step="0.05">
+				<div class="value"></div>
+			</div>
+			<div class="slider-row phase-difference">
+				<div class="variable">$\phi$</div>
+				<input type="range" min="-2" max="2" value="0" step="0.1">
+				<div class="value"></div>
+			</div>
+		</div>
+	</div>
+	<div class="diagram">
+		<figure>
+			<svg class="interference"></svg>
+			<figcaption>Interference of two waves.</figcaption>
+		</figure>
+	</div>
+</section>

@@ -1,0 +1,31 @@
+@import "variables";
+
+#wave-properties {
+	.amplitude {
+		&:hover {
+			color: $blue;
+		}
+	}
+
+	.frequency {
+		&:hover {
+			color: $green;
+		}
+	}
+
+	.wavelength {
+		&:hover {
+			color: $orange;
+		}
+	}
+
+	.sliders {
+		.variable {
+			width: 6rem;
+		}
+
+		.value {
+			width: 4rem;
+		}
+	}
+}

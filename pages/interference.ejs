@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha384-TEMocfGvRuD1rIAacqrknm5BQZ7W7uWitoih+jMNFXQIbNl16bO8OZmylH/Vi/Ei" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js" integrity="sha384-jmxIlussZWB7qCuB+PgKG1uLjjxbVVIayPJwi6cG6Zb4YKq0JIw+OMnkkEC7kYCq" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/contrib/auto-render.min.js" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Neuton:400,400i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
+	<title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+	<div class="content">
+		<section id="waves-on-a-pond">
+			<div class="section" id="water-single-source">
+				<div class="description">
+					<h1>Waves on a Pond</h1>
+					<p>
+						Thomas Young conducted his famous double-slit experiment in 1801. It was one of the first few experiments to conclusively demonstrate the wave-like nature of light. Before we dive into the experiment with light, let's carry out a similar experiment using water waves instead.
+					</p>
+					<p>
+						First, we'll consider a single wave source at the centre of an ocean. Try changing the amplitude and frequency of the waves.
+					</p>
+					<div class="sliders">
+						<div class="slider-row amplitude">
+							<div class="variable">$A$</div>
+							<input type="range" min="0" max="1" value="0.5" step="0.05">
+							<div class="value"></div>
+						</div>
+						<div class="slider-row frequency">
+							<div class="variable">$f$</div>
+							<input type="range" min="0.05" max="1" value="0.5" step="0.05">
+							<div class="value"></div>
+						</div>
+					</div>
+				</div>
+				<div class="diagram">
+					<figure>
+						<svg></svg>
+						<figcaption>A wave source in the middle of an ocean.</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="section" id="water-double-source">
+				<div class="description">
+					<h1>Two Wave Sources</h1>
+					<p>
+						Here are two wave sources to play around with. Keep in mind that the law of superposition still holds here - the wave height at every point is equal to the sum of the contributions from each wave source.
+					</p>
+					<p>
+						Try manipulating the waves' amplitude, frequency, as well as the distance $d$ between them.
+					</p>
+					<div class="sliders one">
+						<div class="slider-row amplitude">
+							<div class="variable">$A_1$</div>
+							<input type="range" min="0" max="1" value="0.5" step="0.05">
+							<div class="value"></div>
+						</div>
+						<div class="slider-row frequency">
+							<div class="variable">$f_1$</div>
+							<input type="range" min="0.05" max="1" value="0.5" step="0.05">
+							<div class="value"></div>
+						</div>
+					</div>
+					<div class="sliders two">
+						<div class="slider-row amplitude">
+							<div class="variable">$A_2$</div>
+							<input type="range" min="0" max="1" value="0.5" step="0.05">
+							<div class="value"></div>
+						</div>
+						<div class="slider-row frequency">
+							<div class="variable">$f_2$</div>
+							<input type="range" min="0.05" max="1" value="0.5" step="0.05">
+							<div class="value"></div>
+						</div>
+					</div>
+					<div class="sliders both">
+						<div class="slider-row distance">
+							<div class="variable">$d$</div>
+							<input type="range" min="0" max="300" value="50" step="10">
+							<div class="value"></div>
+						</div>
+					</div>
+					<p>
+						You are also given a probe you can drag around, to observe the displacement at any point over time.
+					</p>
+					<p>
+						Note that the conditions for coherence also apply here. The waves will interfere when $f_1 = f_2$.
+					</p>
+				</div>
+				<div class="diagram">
+					<figure>
+						<div class="overlap">
+							<canvas></canvas>
+							<svg></svg>
+						</div>
+						<figcaption>Two wave sources.</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="section" id="water-double-source-screen">
+				<div class="description">
+					<h1>Interference Patterns</h1>
+					<p>
+						Here are the same two wave sources, but this time with a screen a distance $D$ away from them. The screen records the displacement along the screen, as well as the average intensity received (the average of the displacement squared over time).
+					</p>
+					<div class="sliders one">
+						<div class="slider-row amplitude">
+							<div class="variable">$A_1$</div>
+							<input type="range" min="0" max="1" value="0.5" step="0.05">
+							<div class="value"></div>
+						</div>
+						<div class="slider-row frequency">
+							<div class="variable">$f_1$</div>
+							<input type="range" min="1" max="3" value="0.5" step="0.05">
+							<div class="value"></div>
+						</div>
+					</div>
+					<div class="sliders two">
+						<div class="slider-row amplitude">
+							<div class="variable">$A_2$</div>
+							<input type="range" min="0" max="1" value="0.5" step="0.05">
+							<div class="value"></div>
+						</div>
+						<div class="slider-row frequency">
+							<div class="variable">$f_2$</div>
+							<input type="range" min="1" max="3" value="0.5" step="0.05">
+							<div class="value"></div>
+						</div>
+					</div>
+					<div class="sliders both">
+						<div class="slider-row distance">
+							<div class="variable">$d$</div>
+							<input type="range" min="0" max="300" value="50" step="10">
+							<div class="value"></div>
+						</div>
+						<div class="slider-row screen-distance">
+							<div class="variable">$D$</div>
+							<input type="range" min="100" max="400" value="390" step="10">
+							<div class="value"></div>
+						</div>
+					</div>
+					<p>
+						Experiment with the values necessary to produce a stable intensity pattern on the screen.
+					</p>
+					<p>
+						You should notice that a stable intensity pattern only appears when $f_1\approx f_2$.
+					</p>
+				</div>
+				<div class="diagram">
+					<figure>
+						<div class="overlap">
+							<canvas></canvas>
+							<svg></svg>
+						</div>
+						<figcaption>Two wave sources.</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="section" id="coherent-sources">
+				<div class="description">
+					<h1>Coherent Patterns</h1>
+					<p>
+						Here are the same two wave sources, but this time with a screen a distance $D$ away from them. The screen records the displacement along the screen, as well as the average intensity received (the average of the displacement squared over time).
+					</p>
+					<div class="sliders one">
+						<div class="slider-row amplitude">
+							<div class="variable">$A_1$</div>
+							<input type="range" min="0" max="1" value="0.5" step="0.05">
+							<div class="value"></div>
+						</div>
+						<div class="slider-row frequency">
+							<div class="variable">$f_1$</div>
+							<input type="range" min="1" max="3" value="0.5" step="0.05">
+							<div class="value"></div>
+						</div>
+					</div>
+					<div class="sliders two">
+						<div class="slider-row amplitude">
+							<div class="variable">$A_2$</div>
+							<input type="range" min="0" max="1" value="0.5" step="0.05">
+							<div class="value"></div>
+						</div>
+						<div class="slider-row frequency">
+							<div class="variable">$f_2$</div>
+							<input type="range" min="1" max="3" value="0.5" step="0.05">
+							<div class="value"></div>
+						</div>
+					</div>
+					<div class="sliders both">
+						<div class="slider-row distance">
+							<div class="variable">$d$</div>
+							<input type="range" min="0" max="300" value="50" step="10">
+							<div class="value"></div>
+						</div>
+						<div class="slider-row screen-distance">
+							<div class="variable">$D$</div>
+							<input type="range" min="100" max="400" value="390" step="10">
+							<div class="value"></div>
+						</div>
+					</div>
+					<p>
+						Experiment with the values necessary to produce a stable intensity pattern on the screen.
+					</p>
+					<p>
+						You should notice that a stable intensity pattern only appears when $f_1\approx f_2$.
+					</p>
+				</div>
+				<div class="diagram">
+					<figure>
+						<div class="overlap">
+							<canvas></canvas>
+							<svg></svg>
+						</div>
+						<figcaption>Two wave sources.</figcaption>
+					</figure>
+				</div>
+			</div>
+			<!-- TODO: Two coherent wave sources + screen -->
+			<!-- TODO: Link to double slit experiment, using svg instead of canvas -->
+			<!-- TODO: Link to diffraction -->
+		</section>
+	</div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+// Apply a natural box layout model to all elements
+// but allowing components to change
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+@import "variables";
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+.katex {
+	font-size: 1em;
+}
+
+.content {
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: 5rem;
+
+	.section {
+		width: 100%;
+		display: flex;
+
+		.description {
+			width: 50%;
+			padding-right: 2rem;
+
+			p {
+				font-family: $serif-font-stack;
+				font-size: 1.2rem;
+				line-height: 1.5;
+				color: #333;
+				margin-bottom: 0;
+
+				.hoverable {
+					border-bottom: 1px dotted #333;
+					cursor: pointer;
+				}
+			}
+
+			h1 {
+				font-family: $sans-font-stack;
+				font-size: 1.5rem;
+				color: #222;
+				margin-top: 3rem;
+			}
+		}
+
+		.diagram {
+			width: 50%;
+			font-family: $sans-font-stack;
+
+			figure {
+				margin: 0;
+				position: sticky;
+				top: 50px;
+				bottom: 5rem;
+				margin-bottom: 50px;
+			}
+		}
+	}
+
+	.next-section {
+		font-family: $sans-font-stack;
+		display: flex;
+		align-items: center;
+		width: 100%;
+
+		p {
+			display: block;
+			flex: 1 0 auto;
+			width: 80%;
+			line-height: 1.5;
+		}
+
+		a {
+			margin-left: 2rem;
+			display: block;
+			flex: 0 0 auto;
+			text-decoration: none;
+			float: right;
+			padding: 0.5rem;
+			background-color: $blue;
+			color: white;
+			border-radius: 5px;
+
+			&:hover {
+				background-color: darken($blue, 10%);
+			}
+		}
+	}
+}
+
+.sliders {
+	margin-top: 1rem;
+
+	.slider-row {
+		display: flex;
+		align-items: baseline;
+
+		.variable, .value {
+			font-size: 1.3rem;
+			padding: 0.5rem;
+		}
+
+		.variable {
+			margin-right: 0.5rem;
+			width: 2rem;
+		}
+
+		.value {
+			margin-left: 0rem;
+			text-align: right;
+			width: 4rem;
+		}
+
+		input {
+			transform: translateY(0.1rem);
+			flex: 1 0 auto;
+		}
+	}
+}
+
+.diagram .overlap {
+	position: relative;
+	display: grid;
+
+	* {
+		grid-area: 1/1;
+		margin-top: 0;
+		margin-left: 0;
+	}
+
+	canvas {
+		z-index: 1;
+	}
+
+	svg {
+		z-index: 2;
+	}
+}

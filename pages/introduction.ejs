@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha384-TEMocfGvRuD1rIAacqrknm5BQZ7W7uWitoih+jMNFXQIbNl16bO8OZmylH/Vi/Ei" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js" integrity="sha384-jmxIlussZWB7qCuB+PgKG1uLjjxbVVIayPJwi6cG6Zb4YKq0JIw+OMnkkEC7kYCq" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/contrib/auto-render.min.js" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Neuton:400,400i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
+	<title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+	<div class="content">
+		<section id="explorable-introduction" class="section">
+			<div class="description">
+				<h1>Introduction to this Explorable</h1>
+				<p>
+					This is an explorable about waves, superposition and interference. Text with a <span class="hoverable">dotted underline</span> can be hovered over.
+				</p>
+			</div>
+		</section>
+		<section id="introduction" class="section">
+			<div class="description">
+				<h1>What are waves?</h1>
+				<p>
+					Waves are <em>disturbances that transfer energy without transferring matter</em>. Sound waves, for instance, transfer energy from the sound’s source (e.g. a speaker) to your ears, without the transfer of air. Light is a less obvious example of a wave. It is an electromagnetic wave, a disturbance in the all-permeating electromagnetic field.
+				</p>
+			</div>
+		</section>
+		<%= require('./sections/wave-properties.html') %>
+		<%= require('./sections/wave-types.html') %>
+		<%= require('./sections/wave-examples.html') %>
+		<%= require('./sections/wave-interaction.html') %>
+		<%= require('./sections/wave-interference.html') %>
+		<section id="standing-waves" class="section">
+			<div class="description">
+				<h1>Standing Waves</h1>
+			</div>
+		</section>
+		<section id="next-section" class="next-section">
+			<p>In the next section, we'll explore waves in two dimensions. We'll look at the famous double slit experiment, and the origins behind the fringe patterns.</p>
+			<a href="interference.html">Next Section</a>
+		</section>
+	</div>
+</body>
+</html>

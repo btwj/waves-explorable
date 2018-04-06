@@ -1,0 +1,44 @@
+<section id="wave-properties" class="section">
+	<div class="description">
+		<p>
+			What distinguishes a loud sound from a soft sound, or a high-pitched sound from a low-pitched sound? Waves of the same type can have certain different characteristics.
+		</p>
+		<p>
+			Waves have an <span class="amplitude hoverable">amplitude $A$</span>, the maximum displacement of a particle in the wave.
+			The <span class="wavelength hoverable">wavelength $\lambda$</span> of a wave is the length between repeating sections of a wave, i.e. the distance between the peaks or troughs of the wave.
+			The <span class="frequency hoverable">frequency $f$</span> of a wave represents the number of wavelengths that pass a certain point in unit time.
+		</p>
+		<p>
+			The velocity of a wave is the distance the wave travels per time. Since the wave travels one wavelength in one period $T = \frac{1}{f}$, \( v = \frac{\text{one wavelength}}{\text{one period}} = \frac{\lambda}{T} = f \lambda . \)
+		</p>
+		<p>
+			Play around with the sliders below to get an intuitive feel for the different wave properties.
+			<div class="sliders">
+				<div class="slider-row amplitude">
+					<div class="variable">$A/\text{units}$</div>
+					<input type="range" min="0.05" max="1" value="0.5" step="0.05">
+					<div class="value"></div>
+				</div>
+				<div class="slider-row wavelength">
+					<div class="variable">$\lambda/\text{units}$</div>
+					<input type="range" min="0.05" max="1" value="0.5" step="0.05">
+					<div class="value"></div>
+				</div>
+				<div class="slider-row frequency">
+					<div class="variable">$f/\text{Hz}$</div>
+					<input type="range" min="0.05" max="1" value="0.5" step="0.05">
+					<div class="value"></div>
+				</div>
+			</div>
+		</p>
+		<p>
+			Notice that if you increase $f$ or $\lambda$, the wave appears to travel faster, since $v = f\lambda$ also increases.
+		</p>
+	</div>
+	<div class="diagram">
+		<figure>
+			<svg height="300" width="500"></svg>
+			<figcaption>A wave travelling to the right.</figcaption>
+		</figure>
+	</div>
+</section>
