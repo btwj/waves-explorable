@@ -162,33 +162,29 @@
 				<div class="description">
 					<h1>Coherent Patterns</h1>
 					<p>
-						Here are the same two wave sources, but this time with a screen a distance $D$ away from them. The screen records the displacement along the screen, as well as the average intensity received (the average of the displacement squared over time).
+						When the two sources are coherent, i.e. have the same frequency, a stable intensity pattern is produced on the screen. Explore how changing the phase difference between the two sources affects the position of the fringes.
 					</p>
-					<div class="sliders one">
-						<div class="slider-row amplitude">
+					<div class="sliders both">
+						<div class="slider-row amplitude one">
 							<div class="variable">$A_1$</div>
 							<input type="range" min="0" max="1" value="0.5" step="0.05">
 							<div class="value"></div>
 						</div>
-						<div class="slider-row frequency">
-							<div class="variable">$f_1$</div>
-							<input type="range" min="1" max="3" value="0.5" step="0.05">
-							<div class="value"></div>
-						</div>
-					</div>
-					<div class="sliders two">
-						<div class="slider-row amplitude">
+						<div class="slider-row amplitude two">
 							<div class="variable">$A_2$</div>
 							<input type="range" min="0" max="1" value="0.5" step="0.05">
 							<div class="value"></div>
 						</div>
 						<div class="slider-row frequency">
-							<div class="variable">$f_2$</div>
+							<div class="variable">$f$</div>
 							<input type="range" min="1" max="3" value="0.5" step="0.05">
 							<div class="value"></div>
 						</div>
-					</div>
-					<div class="sliders both">
+						<div class="slider-row phase-difference">
+							<div class="variable">$\phi$</div>
+							<input type="range" min="-2" max="2" value="0" step="0.05">
+							<div class="value"></div>
+						</div>
 						<div class="slider-row distance">
 							<div class="variable">$d$</div>
 							<input type="range" min="0" max="300" value="50" step="10">
@@ -201,10 +197,10 @@
 						</div>
 					</div>
 					<p>
-						Experiment with the values necessary to produce a stable intensity pattern on the screen.
+						Try slowly adjusting the value of $\phi$. What happens to the position of the intensity peaks?
 					</p>
 					<p>
-						You should notice that a stable intensity pattern only appears when $f_1\approx f_2$.
+						This demonstration using water waves is analagous to the double slit experiment, where the slits are represented by the two sources.
 					</p>
 				</div>
 				<div class="diagram">
@@ -213,11 +209,10 @@
 							<canvas></canvas>
 							<svg></svg>
 						</div>
-						<figcaption>Two wave sources.</figcaption>
+						<figcaption>Two coherent wave sources.</figcaption>
 					</figure>
 				</div>
 			</div>
-			<!-- TODO: Two coherent wave sources + screen -->
 			<!-- TODO: Link to double slit experiment, using svg instead of canvas -->
 			<!-- TODO: Link to diffraction -->
 		</section>
